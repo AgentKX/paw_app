@@ -1,0 +1,87 @@
+<h2>Add a new pet.</h2>
+<%= form_tag '/paws', method: :post do %>
+  <div>
+    <%= label_tag :shelter_name %> 
+    <%= text_field tag :shelter_name %>
+  </div>
+ <div>
+    <%= label_tag :street %> 
+    <%= text_field tag :street %>
+  </div> 
+  <div>
+    <%= label_tag :city %> 
+    <%= text_field tag :city %>
+  </div> 
+  <div>
+    <%= label_tag :state %> 
+    <%= text_field tag :state %>
+  </div> 
+  <div>
+    <%= label_tag :zip %> 
+    <%= text_field tag :zip %>
+  </div> 
+  <div>
+    <%= label_tag :email %> 
+    <%= text_field tag :email %>
+  </div> 
+  <div>
+    <%= label_tag :phone_number %> 
+    <%= text_field tag :phone_number %>
+  </div> 
+  <div>
+    <%= label_tag :pet_name %> 
+    <%= text_field tag :pet_name %>
+  </div> 
+  <div>
+    <%= label_tag :description %> 
+    <%= text_field tag :description %>
+  </div> 
+  <div>
+    <%= label_tag :gender %> 
+    <%= text_field tag :gender %>
+  </div> 
+  <div>
+    <%= label_tag :breed %> 
+    <%= text_field tag :breed %>
+  </div> 
+  <div>
+    <%= label_tag :color %> 
+    <%= text_field tag :color %>
+  </div> 
+  <div>
+    <%= label_tag :weight %> 
+    <%= text_field tag :weight %>
+  </div> 
+  <div>
+    <%= label_tag :age %> 
+    <%= text_field tag :age %>
+  </div> 
+  <div>
+    <%= label_tag :special_needs %> 
+    <%= text_field tag :special_needs %>
+  </div> 
+  <div>
+    <%= label_tag :energy_level %> 
+    <%= text_field tag :energy_level %>
+  </div>
+  <div>
+    <%= label_tag :needs_yard %> 
+    <%= text_field tag :needs_yard %>
+  </div>
+  <div>
+    <%= label_tag :kids_ok %> 
+    <%= text_field tag :kids_ok %>
+  </div>
+  <div>
+    <%= label_tag :fees %> 
+    <%= text_field tag :fees %>
+  </div>
+<div>
+    <%= label_tag :location %> 
+    <%= text_field tag :location %>
+  </div>
+
+<div>
+  <%= submit_tag "Add Pet" %>
+</div>
+  <% end %>

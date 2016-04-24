@@ -1,1 +1,9 @@
-<h1>Paw App</h1>
+<h1>Pets</h1>
+  <% @paws.each do |paw| %> 
+    <h2>Name: <%= link_to paw.name, "/paws/#{paw.id}" %></h2>
+    <h2>Breed: <%= paw.breed %></h2>
+    <h4><%= paw.description %></h4>
+    <img src="<%= paw.image %>" alt="">
+    <% end %>  
+
+<h3><%= link_to "Add a pet", '/pets/new' %></h3>
