@@ -1,0 +1,29 @@
+<h1>Edit Biz Info</h1>
+<%= form_tag "/adopters/#{@adopter.id}", method: :patch do %>
+  <div>
+    <%= label_tag :business_name %> 
+    <%= text_field_tag :business_name, @adopter.business_name %>
+  </div> 
+  <div>
+    <%= label_tag :street %> 
+    <%= text_field_tag :street, @adopter.street %>
+  </div> 
+  <div>
+    <%= label_tag :city %> 
+    <%= text_field_tag :city, @adopter.city %>
+  </div> 
+  <div>
+    <%= label_tag :state %> 
+    <%= text_field_tag :state, @adopter.state %>
+  </div> 
+  <div>
+    <%= label_tag :zip %> 
+    <%= text_field_tag :zip, @adopter.zip %>
+  </div> 
+  <div>
+    <%= label_tag :phone %> 
+    <%= text_field_tag :phone, @adopter.phone %>
+  </div> 
+
+  <%= submit_tag "Submit" %>
+  <% end %>

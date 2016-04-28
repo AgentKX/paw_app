@@ -1,0 +1,56 @@
+<h2>Edit Your Info</h2>
+<%= form_tag "/users/#{@user.id}", method: :patch do %>
+  <div>
+    <%= label_tag :first_name %> 
+    <%= text_field_tag :first_name, @user.first_name %>
+  </div> 
+  <div>
+    <%= label_tag :last_name %> 
+    <%= text_field_tag :last_name, @user.last_name %>
+  </div> 
+  <div>
+    <%= label_tag :street %> 
+    <%= text_field_tag :street, @user.street %>
+  </div> 
+  <div>
+    <%= label_tag :city %> 
+    <%= text_field_tag :city, @user.city %>
+  </div> 
+  <div>
+    <%= label_tag :state %> 
+    <%= text_field_tag :state, @user.state %>
+  </div> 
+  <div>
+    <%= label_tag :zip %> 
+    <%= text_field_tag :zip, @user.zip %>
+  </div> 
+  <div>
+    <%= label_tag :phone %> 
+    <%= text_field_tag :phone, @user.phone %>
+  </div> 
+  <div>
+    <%= label_tag :gender %> 
+    <%= text_field_tag :gender, @user.gender %>
+  </div> 
+  <div>
+    <%= label_tag :has_yard %> 
+    <%= text_field_tag :has_yard, @user.has_yard %>
+  </div>
+  <div>
+    <%= label_tag :has_kids %> 
+    <%= text_field_tag :has_kids, @user.has_kids %>
+  </div>
+  <div>
+    <%= label_tag :employed %> 
+    <%= text_field_tag :employed, @user.employed %>
+  </div>
+  <div>
+    <%= label_tag :retired %> 
+    <%= text_field_tag :retired, @user.retired %>
+  </div>
+
+
+<div>
+  <%= submit_tag "Submit" %>
+</div>
+  <% end %>

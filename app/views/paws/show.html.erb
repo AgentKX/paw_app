@@ -1,25 +1,38 @@
-<h2><%= @paw.name %></h2>
-<h4><%= @paw.description %></h4>
-<h5><%= @paw.gender%></h5>
-<h5><%= @paw.breed%></h5>
-<h5>I weigh: <%= @paw.weight%></h5>
-<h5>Color: <%= @paw.color%></h5>
-<h5>I am <%= @paw.age%> years old. </h5>
-<h5>My energy level is <%= @paw.energy_level%> out of 5.</h5>
-<h5>I need a yard: <%= @paw.needs_yard%></h5>
-<h5>Kids are ok: <%= @paw.kids_ok%></h5>
-<h5>I have special needs: <%= @paw.special_needs%></h5>
-<h5>Adoption Fee: <%= @paw.fees%></h5>
+<% if current_adopter %>
+  <h2><%= @paw.name %></h2>
+  <h4><%= @paw.description %></h4>
+  <%= image_tag @paw.image %>
 
-<%= form_tag '/favorite_paws', method: :post do %>
-  <div>
-    <%= hidden_field_tag :paw_id, @paw.id %>
-  </div>
-  <div>
-    <button class= "btn btn-success" type="submit">Add me to favorite pets!</button>
-  </div>
+  <%= link_to "Edit this Pet", "/paws/#{@paw.id}/edit" %>
+  <%= link_to "Back to Pets", "/paws" %>
+  <%= link_to "This pet has been adopted!", "/paws/#{@paw.id}", method: :delete %>
+
+
+<% else %>
+  <h2><%= @paw.name %></h2>
+  <h4><%= @paw.description %></h4>
+  <h5><%= @paw.gender%></h5>
+  <h5><%= @paw.breed%></h5>
+  <h5>I weigh: <%= @paw.weight%></h5>
+  <h5>Color: <%= @paw.color%></h5>
+  <h5>I am <%= @paw.age%> years old. </h5>
+  <h5>My energy level is <%= @paw.energy_level%> out of 5.</h5>
+  <h5>I need a yard: <%= @paw.needs_yard%></h5>
+  <h5>Kids are ok: <%= @paw.kids_ok%></h5>
+  <h5>I have special needs: <%= @paw.special_needs%></h5>
+  <h5>Adoption Fee: <%= @paw.fees%></h5>
+  <h5>Location: <%= @paw.location%></h5>
+
+  <%= form_tag '/favorite_paws', method: :post do %>
+    <div>
+      <%= hidden_field_tag :paw_id, @paw.id %>
+    </div>
+    <div>
+      <button class= "btn btn-success" type="submit">Add me to favorite pets!</button>
+    </div>
+  <% end %>
+
+  <%= image_tag @paw.image %>
+
+  <a href="/paws">Back to all Pets</a>
 <% end %>
-
-<%= image_tag @paw.image %>
-
-<a href="/paws">Back to all Pets</a>

@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-  has_many :paws
   has_many :favorite_paws
   has_many :paws, through: :favorite_paws
   # Include default devise modules. Others available are:

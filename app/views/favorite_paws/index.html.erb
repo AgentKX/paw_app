@@ -5,4 +5,5 @@
   <%= image_tag favorite_paw.paw.image %>
   <h5><%= favorite_paw.paw.description %></h5>
   <%= link_to "Remove from Favorites", "/favorite_paws/#{favorite_paw.id}", method: :delete %>
+  <%= link_to "Back to all pets", "/paws" %>
 <% end %>

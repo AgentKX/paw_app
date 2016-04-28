@@ -11,14 +11,14 @@ class FavoritePawsController < ApplicationController
     paw_id = params[:paw_id].to_i
     user_id = current_user.id
     FavoritePaw.create(
-      pet_id: pet_id,
+      paw_id: paw_id,
       user_id: user_id
     )
     redirect_to '/favorite_paws'
   end
 
   def delete
-    @favorite_paws = FavoritePaw.find(params[:id])
+    @favorite_paws = FavoritePaw.find_by(params[:id])
     @favorite_paws.destroy
     redirect_to '/favorite_paws'
   end
