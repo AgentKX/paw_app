@@ -43,7 +43,8 @@ class PawsController < ApplicationController
       location: params[:location],
       adopter_id: current_adopter.id
     )
-    redirect_to 'paws/#{paw.id}'
+    flash[:success] = "Pet added!"
+    redirect_to "/paws"
   end
 
   def edit
@@ -71,7 +72,14 @@ class PawsController < ApplicationController
     )
     flash[:success] = "Pet Updated!"
     redirect_to "/paws/#{@paw.id}"
+  end
 
+  def delete
+    paw_id = params[:id]
+    @paw = Paw.find_by(id: paw_id)
+    @paw.delete
+    flash[:success] = "Pet Adopted"
+    redirect_to '/adopters'
   end
 
   private

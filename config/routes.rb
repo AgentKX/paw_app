@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/paws/:id' => 'paws#show'
   get '/paws/:id/edit' => 'paws#edit'
   patch '/paws/:id' => 'paws#update'
-  get '/paws/:id' => 'paws#delete'
+  delete '/paws/:id' => 'paws#delete'
 
  
   get '/adopters' => 'adopters#index'
@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/adopters/:id' => 'adopters#show'
   get '/adopters/:id/edit' => 'adopters#edit'
   patch '/adopters/:id' => 'adopters#update'
+  get '/adopters:id' => 'adopters#delete'
 
  
   get '/users' => 'users#index'
