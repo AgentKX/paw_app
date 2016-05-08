@@ -1,3 +1,79 @@
+<html>
+<body>
+
+<style>
+    body{
+        font-family: 'Dosis', sans-serif;
+        font-size: 
+
+    }
+</style>
+<section id="content-region-3" class="padding-40 page-tree-bg">
+            <div class="container">
+                <h3 class="page-tree-text">
+                    Favorite Pets
+                </h3>
+            </div>
+        </section><!--page-tree end here-->
+        <div class="space-70"></div>
+        <div class="container">
+                 <% @favorite_paws.each do |favorite_paw| %>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="blog-post-section">
+                        <div class="blog-post-img">
+                            <img src="<%= favorite_paw.paw.image %>" class="img-responsive" alt="">
+                        </div>
+                        <div class="blog-post-header">
+                            <h3><%= favorite_paw.paw.name %></h3>
+                        </div>
+                        <div class="blog-post-info">
+                            <span></a></a></span>
+                        </div>
+                        <div class="blog-post-detail">
+                            <h4><%= favorite_paw.paw.description %></h4>
+                        </div>
+                        <div class="blog-post-more text-right">
+                            <a href="/paws" class="btn theme-btn-default btn-lg">Back to all Pets</a>
+                        </div>
+                        <div class="blog-post-more text-right">
+                            <a href="/favorite_paws/<%= favorite_paw.id %>" class="btn theme-btn-default btn-lg">Remove from Favorites</a>
+                        </div>
+                    </div><!--blog post section end-->
+                  
+                    <div class="space-40"></div>
+                    
+                        <div class="blog-post-img">
+                            <div class="flexslider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="assets/img/blog/blog-1.jpg" class="img-responsive" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/img/blog/blog-2.jpg" class="img-responsive" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/img/blog/blog-3.jpg" class="img-responsive" alt="">
+                                    </li>
+                                </ul>
+                            </div><!--flex slider-->
+
+                </div><!--blog content-->             
+            </div>
+          <% end %>
+        </div><!--blog full page content end here-->
+</body>           
+</html>
+
+
+
+
+
+
+
+
+
+
 <h2>My Favorite pets</h2>
  
 <% @favorite_paws.each do |favorite_paw| %>
