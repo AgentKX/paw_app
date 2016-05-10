@@ -51,10 +51,17 @@
                         <p>
                             <strong>Kids are ok: </strong><%= @paw.kids_ok %>
                         </p>
+                        <p>
+                            <strong>You can find me at </strong><%= @paw.location %>
+                        </p>
                         <br>
                         <p>
-                            <a href="https://maps.google.com" class="btn btn-radius theme-btn-color">Visit <%=@paw.name %></a>
-                            <a href="https://maps.google.com" class="btn btn-radius theme-btn-color">Add me to your favorite Pets</a>
+                            <a href="/paws" class="btn btn-radius theme-btn-color">Back to all Pets</a>
+                            <%= form_tag "/favorite_paws", method: :post do %>
+                              <%= hidden_field_tag :paw_id, @paw.id %>
+                              <%= submit_tag "Add to favorites", class: "btn btn-success" %>
+                            <% end %>
+
                         </p>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @paws = Paw.all 
+    @paws = Paw.all
     render 'index.html.erb'
   end
 
@@ -37,8 +37,8 @@ class UsersController < ApplicationController
       employed: params[:retired],
       retired: params[:retired]
     )
-    flash[:success] = "Ingo Updated!"
-    redirect_to "/users/#{@user.id}"
+    flash[:success] = "Info Updated!"
+    redirect_to "/users/#{@user.id}/edit"
   end
   # def create
   #   Paw.create(

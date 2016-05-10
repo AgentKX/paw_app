@@ -15,7 +15,7 @@
         <!--custom css-->
         <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
         <!--google  font family-->
-
+        <link href="assets/css/sweetalert.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400italic' rel='stylesheet' type='text/css'>
         <!--flex slider css-->
         <link href="/assets/css/flexslider.css" rel="stylesheet">
@@ -54,8 +54,11 @@
                             <li class="active dropdown">
                                 <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Home</a> 
                                 <ul class="dropdown-menu">
-                                    <li><a href="/users">Home</a></li>
-                                    <li><a href="home-master.html">Home - Master Slider <span class="badge">Hot</span></a></li>
+                                
+                                    <% if current_adopter == "adopters" %>
+                                    <li><a href="/adopters">Home</a></li>
+                                   <% end %>
+                                   <li><a href="/users">Home<span></span></a></li>
                                     <li><a href="home-animation.html">Home - Animations</a></li>
                                     <li><a href="home-boxed.html">Home boxed</a></li><li><a href="home-onepage.html">One Page</a></li>
                                     <li class="dropdown-submenu">
@@ -76,11 +79,16 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Login</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="portfolio.html">Portfolio 3 col</a></li>
-                                    <li><a href="portfolio-masonry.html">Portfolio Masonry</a></li>
-                                    <li><a href="portfolio-full.html">Portfolio Full width</a></li>
-                                    <li><a href="portfolio-full-boxed.html">Full width boxed</a></li>                            
+                                
+                                    <li><a href="users/sign_in">Member Login</a></li>
+                                    <li><a href="/users/sign_up">Sign Up</a></li>
+                                    <li><a href="adopters/sign_in">Business Login</a></li>                            
+                                    <li><a href="adopters/sign_up">Add your business</a></li>
+                                    <li><%= link_to "Log Out", "/users/sign_out", method: :delete %></li>
+                                    <li><%= link_to "Business Log Out", "/adopters/sign_out", method: :delete %></li>
+                                
                                     <li><a href="portfolio-single.html">Portfolio Single</a></li>
+                                    
                                 </ul>
                             </li>
                             <li class=" dropdown">

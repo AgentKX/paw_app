@@ -49,7 +49,7 @@ class PawsController < ApplicationController
 
   def edit
     paw_id = params[:id]
-    @paw = Paw.find_by(id: paw_id)
+    @paw = Paw.find_by(id: params[:id])
     render 'edit.html.erb'
   end
 
@@ -75,8 +75,7 @@ class PawsController < ApplicationController
   end
 
   def delete
-    paw_id = params[:id]
-    @paw = Paw.find_by(id: paw_id)
+    @paw = Paw.find_by(id: params[:id])
     @paw.delete
     flash[:success] = "Pet Adopted"
     redirect_to '/adopters'
@@ -86,8 +85,9 @@ class PawsController < ApplicationController
 
   def validate!
     unless current_adopter
-      redirect_to '/paws'
-      flash[:warning] = "You do not have access."
+      flash[:warning] = "You do not have permission to edit this!"
+      redirect_to '/adopters'
+      
     end
   end
 end

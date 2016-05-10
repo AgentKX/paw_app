@@ -1,7 +1,8 @@
 class AdoptersController < ApplicationController
   
-  before_action :validate!, :except => [:index, :show]
+  # before_action :validate!, :except => [:index, :show]
   def index
+    @adopter = Adopter.find_by(id: params[:id])
     @paws = Paw.all 
     render 'index.html.erb'
   end
@@ -33,13 +34,13 @@ class AdoptersController < ApplicationController
     
   end
 
-  private
+  # private
 
-  def validate!
-    unless current_adopter
-      redirect_to '/paws'
-      flash[:message] = "You do not have access."
-    end
-  end
+  # def validate!
+  #   unless current_adopter
+  #     redirect_to '/paws'
+  #     flash[:message] = "You do not have access."
+  #   end
+  # end
 end
 
