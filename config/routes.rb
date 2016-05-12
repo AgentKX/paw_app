@@ -35,5 +35,12 @@ Rails.application.routes.draw do
 
   get '/paws_search' => 'paws#search_form'
   post '/paws_search' => 'paws#search_results'
+
+  namespace :api do
+    namespace :v1 do
+      get '/paws' => 'paws#index'
+     
+    end
+  end
 end 
 

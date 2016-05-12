@@ -25,6 +25,19 @@
     <% end %>
   </div>
 
+  <div ng-app="app">
+    <div ng-controller="pawCtrl" ng-init="setup()">
+      <div ng-app="myApp">
+        Search: <input ng-model="name">
+        <button ng-click="searchPaw(name)">search</button>
+      </div>
+      <div ng-repeat="paw in paws">
+        <h2>{{ paw.petName }}</h2>
+        <img ng-src="{{paw.imageUrl}}">
+      </div>
+    </div>
+  </div>
+
 </div><!--masonary wrapper-->
 <script src="/assets/js/jquery.min.js" type="text/javascript"></script>
 <script src="/assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -53,10 +66,3 @@
 </script>
 <div class="space-70"></div>
 
-<h1>Pets</h1>
-  <% @paws.each do |paw| %> 
-    <h2>Name: <%= link_to paw.name, "/paws/#{paw.id}" %></h2>
-    <h2>Breed: <%= paw.breed %></h2>
-    <h4><%= paw.description %></h4>
-    <img src="<%= paw.image %>" alt="">
-    <% end %>  
