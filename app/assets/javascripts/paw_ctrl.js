@@ -5,7 +5,9 @@
     $scope.setup = function() {
 
     };
+    $scope.uploadFile = function(file) {
 
+    }
 
     $scope.searchPaw = function(inputUrl) {
       console.log(inputUrl);

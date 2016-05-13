@@ -40,6 +40,12 @@ GEM
     arel (6.0.3)
     autoprefixer-rails (6.3.3.1)
       execjs
+    aws-sdk (2.3.4)
+      aws-sdk-resources (= 2.3.4)
+    aws-sdk-core (2.3.4)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.3.4)
+      aws-sdk-core (= 2.3.4)
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -48,6 +54,10 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.2)
     byebug (8.2.4)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -71,17 +81,24 @@ GEM
       railties (>= 4.0, < 5.1)
     erubis (2.7.0)
     execjs (2.6.0)
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
+    imgurapi (3.0.0)
+      faraday
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
+    jmespath (1.2.4)
+      json_pure (>= 1.8.1)
     jquery-rails (4.1.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
+    json_pure (1.8.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -89,12 +106,20 @@ GEM
     mime-types (3.0)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0221)
+    mimemagic (0.3.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
+    multipart-post (2.0.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
+    paperclip (5.0.0.beta2)
+      activemodel (>= 4.2.0)
+      activesupport (>= 4.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (~> 0.3.0)
     pg (0.18.4)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -190,13 +215,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk
   bootstrap-sass
   byebug
   coffee-rails (~> 4.1.0)
   devise
   dotenv-rails
+  imgurapi
   jbuilder (~> 2.0)
   jquery-rails
+  paperclip (~> 5.0.0.beta1)
   pg (~> 0.15)
   rails (= 4.2.5.2)
   rspec-rails (~> 3.0)

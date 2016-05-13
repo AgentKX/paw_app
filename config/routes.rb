@@ -39,7 +39,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get '/paws' => 'paws#index'
-     
+      post '/pawsphoto' => 'paws#search_image'
     end
   end
 end 

@@ -32,6 +32,12 @@ Rails.application.configure do
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
 
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
+    :bucket => 'pawsapp'
+  }
+
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.

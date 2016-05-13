@@ -1,0 +1,12 @@
+<%= form_for @paw url: paws_path, html: { multipart: true } do |form| %>
+
+
+<div>
+  <%= @paws.each do |paw| %>
+  <%= image_tag paw.avatar.url %>
+  <%= form.file_field :avatar %>
+  <%= form.submit "submit" %>
+</div>
+
+<% end %>
+<% end %>
