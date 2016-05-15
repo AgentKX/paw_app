@@ -46,71 +46,56 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/users"><img src="/assets/img/logo-dark.png" class="img-responsive" alt=""></a>
+                        <a class="navbar-brand" href="/users">Project Pet</a>
                     </div>
                     <div class="navbar-collapse collapse">
 
                         <ul class="nav navbar-nav navbar-right">
                             <li class="active dropdown">
-                                <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Home</a> 
+                                <a href="/users" class="dropdown-toggle js-activated" data-toggle="dropdown">Home</a> 
                                 <ul class="dropdown-menu">
                                 
                                     <% if current_adopter == "adopters" %>
                                     <li><a href="/adopters">Home</a></li>
                                    <% end %>
                                    <li><a href="/users">Home<span></span></a></li>
-                                    <li><a href="home-animation.html">Home - Animations</a></li>
-                                    <li><a href="home-boxed.html">Home boxed</a></li><li><a href="home-onepage.html">One Page</a></li>
-                                    <li class="dropdown-submenu">
-                                        <a tabindex="-1" href="#">Multi level menu </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#"> menu level 2</a></li>
-                                            <li class="dropdown-submenu">
-                                                <a tabindex="-1" href="#">menu level 2 </a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#"> menu level 3</a></li>
-                                                    <li><a href="#"> menu level 3</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                        
+                                     </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Login</a>
                                 <ul class="dropdown-menu">
                                 
-                                    <li><a href="users/sign_in">Member Login</a></li>
                                     <li><a href="/users/sign_up">Sign Up</a></li>
+                                    <li><a href="users/sign_in">Member Login</a></li>
                                     <li><a href="adopters/sign_in">Business Login</a></li>                            
                                     <li><a href="adopters/sign_up">Add your business</a></li>
                                     <li><%= link_to "Log Out", "/users/sign_out", method: :delete %></li>
                                     <li><%= link_to "Business Log Out", "/adopters/sign_out", method: :delete %></li>
-                                
-                                    <li><a href="portfolio-single.html">Portfolio Single</a></li>
                                     
                                 </ul>
                             </li>
                             <li class=" dropdown">
-                                <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Blog</a>
+                                <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Pet Care</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="blog-full.html">Blog Full width</a></li>
-                                    <li><a href="blog-sidebar.html">Blog Sidebar</a></li>  
-                                    <li><a href="blog-masonry.html">Blog Masonry</a></li>
-                                    <li><a href="blog-post.html">Blog Post</a></li>
+                                    <li><a href="http://www.aspca.org/pet-care/dog-care">Dogs</a></li>
+                                    <li><a href="http://www.aspca.org/pet-care/cat-care">Cats</a></li>  
+                                    <li><a href="http://myhouserabbit.com/rabbit-care/">Rabbits</a></li>
+                                    <li><a href="http://www.humanesociety.org/animals/pet_birds/tips/bird_care.html">Birds</a></li>
                                 </ul>
                             </li>
 
                             <!--mega menu-->
                             <li class="dropdown yamm-fw">
-                                <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">More  <i class="fa fa-angle-down"></i></a>
+                                <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Resources  <i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <div class="yamm-content">
                                             <div class="row">
 
                                                 <div class="col-sm-3">
-                                                    <h3 class="heading">Pages 1</h3>
+                                                    <h3 class="heading">General</h3>
                                                     <ul class="nav mega-vertical-nav">  
                                                         <li><a href="about.html">About Us</a></li>
                                                         <li><a href="contact.html">Contact Us</a></li>
@@ -122,31 +107,31 @@
 
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    <h3 class="heading">Pages 2 </h3>
+                                                    <h3 class="heading">Pet Info </h3>
                                                     <ul class="nav mega-vertical-nav">
-                                                        <li><a href="page-fullwidth.html">Full Width</a></li>
-                                                        <li><a href="page-leftbar.html">Left Sidebar</a></li>
-                                                        <li><a href="page-rightbar.html">Right Sidebar</a></li>
-                                                        <li><a href="faqs.html">Faqs</a></li>
-                                                        <li><a href="page-error.html">Error 404</a></li>
+                                                        <li><a href="http://www.care-evanston.org/chicago-area-shelters/">Shelters and Rescues</a></li>
+                                                        <li><a href="http://petsarelikefamily.org/outreach-and-advocacy/volunteer-opportunities/">Volunteer</a></li>
+                                                        <li><a href="http://www.pawschicago.org/how-to-help/foster/">Foster a Pet</a></li>
+                                                        <li><a href="https://secure.aspca.org/">Donate</a></li>
+                                                        <li><a href="https://www.petsofthehomeless.org/about-us/faqs/">FAQ's</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    <h3 class="heading">Features</h3>
+                                                    <h3 class="heading">News</h3>
                                                     <ul class="nav mega-vertical-nav">
-                                                        <li><a href="typography.html">Typography</a></li>
-                                                        <li><a href="shortcodes.html">Shortcodes</a></li>                              
-                                                        <li><a href="pricing.html">Pricing Tables</a></li>
-                                                        <li><a href="footer-option.html">Footer option</a></li>
+                                                        <li><a href="http://www.thepuppymillproject.org/">Puppy Mills</a></li>
+                                                        <li><a href="http://www.aspca.org/animal-cruelty">Animal Cruelty</a></li>
+                                                        <li><a href="http://www.avmf.org/whatwedo/animal-disaster-relief-and-response-fund">Animal Disaster Relief</a></li>
+                                                        
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    <h3 class="heading">Shop</h3>
+                                                    <h3 class="heading">Our Business</h3>
                                                     <ul class="nav mega-vertical-nav">
-                                                        <li><a href="shop-default.html">Shop 3 columns</a></li><li><a href="shop-sidebar.html">Shop Sidebar</a></li>
-                                                        <li><a href="product-detail.html">Product Detail</a></li>                              
-                                                        <li><a href="shop-cart.html">Cart</a></li>
-                                                        <li><a href="shop-checkout.html">Checkout</a></li>
+                                                        <li><a href="#">Partnerships</a></li><li>
+                                                        <li><a href="#">Privacy Policy</a></li>                              
+                                                        <li><a href="#">Terms of Service</a></li>
+                                                        <li><a href="#">Careers</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -185,16 +170,14 @@
                     <div class="col-md-4 margin-btm-20">
                         <div class="footer-col">
                             <h3>ProjectPet</h3>
-                            <p>
-                                aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-                            </p>
+                            <p>Dedicated to pairing pets with humans</p>
                         </div>
                         <div class="space-20"></div>
                         <div class="footer-col">
                             <h3>contact info</h3>
-                            <p><i class="ion-home"></i> pearl tower,3rd floor,jaipur,302012</p>
-                            <p><i class="ion-iphone"></i> +91 9887568614</p>
-                            <p><i class="ion-email"></i> mail@domain.com</p>
+                            <p><i class="ion-home"></i> 1871</p>
+                            <p><i class="ion-iphone"></i> Chicago, IL </p>
+                            <p><i class="ion-email"></i> projectpet@gmail.com</p>
                         </div>
                         <div class="space-20"></div>
                         <div class="footer-col">
@@ -212,11 +195,10 @@
                         <div class="footer-col">
                             <h3>Latest post</h3>
                             <ul class="post-list list-unstyled">
-                                <li><a href="#" class="hover-color">Blog post with image</a></li>
-                                <li><a href="#" class="hover-color">lorem ipsum dollor sit amet</a></li>
-                                <li><a href="#" class="hover-color">Blog post with audio</a></li>
-                                <li><a href="#" class="hover-color">lorem ipsum dollor sit amet</a></li>
-                                <li><a href="#" class="hover-color">Blog post with quote</a></li>
+                                <li><a href="#" class="hover-color">About Us</a></li>
+                                <li><a href="#" class="hover-color">Services</a></li>
+                                <li><a href="#" class="hover-color">Our Team</a></li>
+                                <li><a href="#" class="hover-color">Careeers</a></li>
                             </ul>
                         </div>
                     </div><!--latest post col end-->
@@ -248,9 +230,9 @@
                 <div class="space-70"></div>
                 <div class="row">
                     <div class="col-md-12 text-center footer-bottom">
-                        <a href="index.html"> <img src="/assets/img/logo-white.png" alt=""></a>
+                        
                         <div class="space-20"></div>
-                        <span>&copy;2016.all right resrved.Design by design_mylife</span>
+                        
                     </div>
                 </div><!--footer copyright row end-->
             </div><!--container-->

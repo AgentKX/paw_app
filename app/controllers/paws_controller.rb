@@ -1,5 +1,5 @@
 class PawsController < ApplicationController
-  before_action :validate!, :except => [:index, :show]
+  # before_action :validate!, :except => [:index, :show]
 
   def path
     if current_adopter 
@@ -81,13 +81,13 @@ class PawsController < ApplicationController
     redirect_to '/adopters'
   end
 
-  private
+  # private
 
-  def validate!
-    unless current_adopter
-      flash[:warning] = "You do not have permission to edit this!"
-      redirect_to '/adopters'
+  # def validate!
+  #   unless current_adopter
+  #     flash[:warning] = "You do not have permission to edit this!"
+  #     redirect_to '/users'
       
-    end
-  end
+  #   end
+  # end
 end

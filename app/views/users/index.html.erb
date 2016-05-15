@@ -363,9 +363,9 @@
                         </div>
                     </div>
                 </div><!--latest news items-->
-            </div><!--row end-->
-        </div><!--container recent news end-->
-        <div class="space-50"></div>
+            </div>
+        
+       
         
 
         <!--scripts-->
@@ -414,10 +414,3 @@
 
 
 
-  <h1>Pets</h1>
-  <% @paws.each do |paw| %> 
-  <h2>Name: <%= link_to paw.name, "/paws/#{paw.id}" %></h2>
-  <h2>Breed: <%= paw.breed %></h2>
-  <h4><%= paw.description %></h4>
-  <img src="<%= paw.image %>" alt="">
-  <% end %>  
