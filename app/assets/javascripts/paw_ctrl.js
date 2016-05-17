@@ -40,7 +40,7 @@
     };
     $scope.uploadFile = function(file) {
 
-    }
+    };
 
     $scope.searchPaw = function(inputUrl) {
       console.log(inputUrl);
@@ -61,6 +61,14 @@
         $scope.paws = response.data.images;
         console.log($scope.paws);
       });
+    };
+
+    $scope.addToExternalFavorite = function(inputPaw) {
+      $http.post('api/v1/external_paws',{'name': inputPaw.name, 'description':  inputPaw.description})
+      .then(
+          console.log(inputPaw)
+        );
+    };
       // $http({
       //   method: 'POST',
       //   url: '/api/v1/pawsphoto',
@@ -73,7 +81,7 @@
       //   },
       //   transformRequest: customFormDataObject
       // });
-    };
+    
 
     window.$scope = $scope;
   });

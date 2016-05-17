@@ -41,6 +41,7 @@ Rails.application.routes.draw do
       get '/paws' => 'paws#index'
       post '/pawsphoto' => 'paws#search_image'
       get '/external_paws' => 'external_paws#index'
+      post '/external_paws' => 'external_paws#create'
     end
   end
 end 
