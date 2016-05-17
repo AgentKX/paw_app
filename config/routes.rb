@@ -40,6 +40,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/paws' => 'paws#index'
       post '/pawsphoto' => 'paws#search_image'
+      get '/external_paws' => 'external_paws#index'
     end
   end
 end 

@@ -41,6 +41,7 @@ class PawsController < ApplicationController
       kids_ok: params[:kids_ok],
       fees: params[:fees],
       location: params[:location],
+      image: params[:image],
       adopter_id: current_adopter.id
     )
     flash[:success] = "Pet added!"
@@ -80,6 +81,18 @@ class PawsController < ApplicationController
     flash[:success] = "Pet Adopted"
     redirect_to '/adopters'
   end
+
+
+  private
+
+  def image_params
+    params.permit(:photo)
+  end
+
+  def paw_params
+    params.require(:paw).permit(:firstname, :description, :avatar)
+  end
+
 
   # private
 

@@ -1,56 +1,67 @@
-<h2>Edit this pet.</h2>
 <%= form_tag "/paws/#{@paw.id}", method: :patch do %>
-  <div>
-    <%= label_tag :name %> 
-    <%= text_field_tag :name, @paw.name %>
-  </div> 
-  <div>
-    <%= label_tag :description %> 
-    <%= text_field_tag :description, @paw.description %>
-  </div> 
-  <div>
-    <%= label_tag :gender %> 
-    <%= text_field_tag :gender, @paw.gender %>
-  </div> 
-  <div>
-    <%= label_tag :breed %> 
-    <%= text_field_tag :breed, @paw.description %>
-  </div> 
-  <div>
-    <%= label_tag :color %> 
-    <%= text_field_tag :color, @paw.color %>
-  </div> 
-  <div>
-    <%= label_tag :weight %> 
-    <%= text_field_tag :weight, @paw.weight %>
-  </div> 
-  <div>
-    <%= label_tag :age %> 
-    <%= text_field_tag :age, @paw.age %>
-  </div> 
-  <div>
-    <%= label_tag :special_needs %> 
-    <%= text_field_tag :special_needs, @paw.special_needs %>
-  </div> 
-  <div>
-    <%= label_tag :energy_level %> 
-    <%= text_field_tag :energy_level, @paw.energy_level %>
-  </div>
-  <div>
-    <%= label_tag :needs_yard %> 
-    <%= text_field_tag :needs_yard, @paw.needs_yard %>
-  </div>
-  <div>
-    <%= label_tag :kids_ok %> 
-    <%= text_field_tag :kids_ok, @paw.kids_ok %>
-  </div>
-  <div>
-    <%= label_tag :fees %> 
-    <%= text_field_tag :fees, @paw.fees %>
-  </div>
 
+  <section id="content-region-3" class="padding-40 page-tree-bg">
+            <div class="container">
+                <h3 class="page-tree-text">Update Information
+                    
+                </h3>
+            </div>
+        </section><!--page-tree end here-->
+        <div class="space-70"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="my-login-form">
+                         <form>
+                        <h4 class="heading-mini">Update</h4><hr>
+                        <div class="row">
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                             <div class="col-md-6 margin-btm-20">
+                                <input type="email" class="form-control" placeholder="Descrition">
+                            </div>
+                             <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Gender">
+                            </div>
+                             <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Color">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Weight">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Age">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Special Needs">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Energy Level">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Needs a Yard">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Kids Ok">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Fees">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Location">
+                            </div>
+                            <div class="col-md-12 text-right">
+                                <button type="submit" class="btn theme-btn-color">Submit</button>
+                            </div>
 
-<div>
-  <%= submit_tag "Edit" %>
-</div>
-  <% end %>
+                        </div>
+                        <hr>
+                        <div class="form-btm-link text-center">
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% end %>

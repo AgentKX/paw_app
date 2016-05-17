@@ -1,4 +1,4 @@
-<%= form_for @paw url: paws_path, html: { multipart: true } do |form| %>
+<%= form_for @paw, url: paws_path, html: { multipart: true } do |form| %>
 
 
 <div>
@@ -7,6 +7,11 @@
   <%= form.file_field :avatar %>
   <%= form.submit "submit" %>
 </div>
+
+<div>
+  <%= form.label   %>
+</div>
+
 
 <% end %>
 <% end %>

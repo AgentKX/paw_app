@@ -33,13 +33,15 @@
       </div>
       <div class="search">
         Or, upload a photo:
-        <%= form_tag "/api/v1/pawsphoto", multipart: true, method: :post do %>
-          <%= file_field_tag :photo %>
-          <%= submit_tag "Search" %>
-        <% end %>
+        <form>
+          <input type="file" file-model="fileToUpload"/>
+          <button ng-click="searchPaw2(fileToUpload)">Search</button>
+        </form>
       </div>
+      
       <div ng-repeat="paw in paws">
         <h2>{{ paw.petName }}</h2>
+        <button ng-click="addToExternalFavorite(paw)">Add to favorite</button>
         <img ng-src="{{paw.imageUrl}}">
       </div>
     </div>

@@ -23,6 +23,7 @@
         <link href="/assets/css/animate.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
         <%= csrf_meta_tags %>
@@ -46,31 +47,28 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/users">Project Pet</a>
+                        <% if current_adopter == "adopters" %>
+                            <a class="navbar-brand" href="/adopters">Project Pet</a>
+                        <% else %>
+                            <a class="navbar-brand" href="/users">Project Pet</a>
+                        <% end %>
                     </div>
                     <div class="navbar-collapse collapse">
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active dropdown">
-                                <a href="/users" class="dropdown-toggle js-activated" data-toggle="dropdown">Home</a> 
-                                <ul class="dropdown-menu">
-                                
-                                    <% if current_adopter == "adopters" %>
-                                    <li><a href="/adopters">Home</a></li>
-                                   <% end %>
-                                   <li><a href="/users">Home<span></span></a></li>
-                                        
-                                     </li>
-                                </ul>
-                            </li>
+                            <% if current_adopter == "adopters" %>
+                                <li><a href="/adopters">Home</a></li>
+                            <% else %>
+                                <li><a href="/users">Home<span></span></a></li>
+                            <% end %>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Login</a>
                                 <ul class="dropdown-menu">
                                 
                                     <li><a href="/users/sign_up">Sign Up</a></li>
-                                    <li><a href="users/sign_in">Member Login</a></li>
-                                    <li><a href="adopters/sign_in">Business Login</a></li>                            
-                                    <li><a href="adopters/sign_up">Add your business</a></li>
+                                    <li><a href="/users/sign_in">Member Login</a></li>
+                                    <li><a href="/adopters/sign_in">Business Login</a></li>                            
+                                    <li><a href="/adopters/sign_up">Add your business</a></li>
                                     <li><%= link_to "Log Out", "/users/sign_out", method: :delete %></li>
                                     <li><%= link_to "Business Log Out", "/adopters/sign_out", method: :delete %></li>
                                     

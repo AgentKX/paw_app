@@ -12,7 +12,8 @@ Paw.create(
   energy_level: 3, 
   needs_yard: true, 
   kids_ok: false, 
-  fees: 75
+  fees: 75,
+  location: "Lakeshore Animal Shelter"
 )
 Paw.create(
   name: "Ancho", 
@@ -27,7 +28,8 @@ Paw.create(
   energy_level: 2, 
   needs_yard: false, 
   kids_ok: false, 
-  fees: 75
+  fees: 75,
+  location: "The Anti-Cruelty Society"
 )
 Paw.create(
   name: "Lady", 
@@ -42,7 +44,8 @@ Paw.create(
   energy_level: 5, 
   needs_yard: true, 
   kids_ok: true, 
-  fees: 75
+  fees: 75,
+  location: "Lovin' Life Rescue"
 )
 Paw.create(
   name: "Hugo", 
@@ -57,7 +60,56 @@ Paw.create(
   energy_level: 4, 
   needs_yard: true, 
   kids_ok: true, 
-  fees: 75
+  fees: 75,
+  location: "PAWS Chicago"
+)
+Paw.create(
+  name: "Alice", 
+  image: "http://www.momswhothink.com/images/stories/baby-names/female-cat-names.jpg", 
+  gender: "Female", 
+  breed: "American Shorthair", 
+  weight: 14, 
+  color: "White/Brown", 
+  age: "5", 
+  description: "Enjoys tuna and 90's sitcoms", 
+  special_needs: false, 
+  energy_level: 4, 
+  needs_yard: false, 
+  kids_ok: true, 
+  fees: 75,
+  location: "Lakeshore Animal Shelter"
+)
+Paw.create(
+  name: "Andy", 
+  image: "https://upload.wikimedia.org/wikipedia/commons/3/38/Shaded_silver_Persian_Cat_Missionhill_Cosmic_Rainstorm.jpg", 
+  gender: "Male", 
+  breed: "Persian", 
+  weight: 17, 
+  color: "White", 
+  age: "3", 
+  description: "Big cuddler who can't get enough of his yarn ball", 
+  special_needs: false, 
+  energy_level: 2, 
+  needs_yard: false, 
+  kids_ok: true, 
+  fees: 75,
+  location: "PAWS Chicago"
+)
+Paw.create(
+  name: "Jay", 
+  image: "http://media1.santabanta.com/full1/Animals/Rabbits/rabbits-14a.jpg", 
+  gender: "Male", 
+  breed: "American", 
+  weight: 8, 
+  color: "Light Brown", 
+  age: "5", 
+  description: "Playful rabbit, enjoys Monty Python and coding in python", 
+  special_needs: false, 
+  energy_level: 4, 
+  needs_yard: true, 
+  kids_ok: true, 
+  fees: 75,
+  location: "The Anti-Cruelty Society"
 )
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
