@@ -1,4 +1,4 @@
-class Api::V1::PawsController < ApplicationController
+class Api::V1::PawsController < Api::V1::ApiController
   def index
     render json: data
   end

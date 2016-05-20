@@ -2,6 +2,7 @@ class FavoritePawsController < ApplicationController
   def index
     if current_user
       @favorite_paws = FavoritePaw.where(user_id: current_user.id)
+      @external_favorite_paws = ExternalPaw.where(user_id: current_user.id)
     else 
       redirect_to '/users/sign_in'
     end
@@ -18,7 +19,7 @@ class FavoritePawsController < ApplicationController
   end
 
   def delete
-    @favorite_paws = FavoritePaw.find_by(params[:id])
+    @favorite_paws = FavoritePaw.find_by(id: params[:id])
     @favorite_paws.destroy
     redirect_to '/favorite_paws'
   end

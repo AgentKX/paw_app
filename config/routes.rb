@@ -31,6 +31,9 @@ Rails.application.routes.draw do
   post '/favorite_paws' => 'favorite_paws#create'
   get '/favorite_paws/:id' => 'favorite_paws#index'
   delete '/favorite_paws/:id' => 'favorite_paws#delete'
+
+  get '/external_favorite_paws/:id' => 'external_favorite_paws#index'
+  delete '/external_favorite_paws/:id' => 'external_favorite_paws#delete'
   
 
   get '/paws_search' => 'paws#search_form'

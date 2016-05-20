@@ -3,7 +3,11 @@ class AdoptersController < ApplicationController
   # before_action :validate!, :except => [:index, :show]
   def index
     @adopter = Adopter.find_by(id: params[:id])
-    @paws = Paw.all 
+    if params[:search]
+      @paws = Paw.where("lower(name) LIKE ?", "%#{params[:search].downcase}%")
+    else
+      @paws = Paw.all 
+    end 
     render 'index.html.erb'
   end
 

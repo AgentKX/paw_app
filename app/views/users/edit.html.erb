@@ -1,57 +1,85 @@
-<h2>Your Info</h2>
 <%= form_tag "/users/#{@user.id}", method: :patch do %>
-  <div>
-    <%= label_tag :first_name %> 
-    <%= text_field_tag :first_name, @user.first_name %>
-  </div> 
-  <div>
-    <%= label_tag :last_name %> 
-    <%= text_field_tag :last_name, @user.last_name %>
-  </div> 
-  <div>
-    <%= label_tag :street %> 
-    <%= text_field_tag :street, @user.street %>
-  </div> 
-  <div>
-    <%= label_tag :city %> 
-    <%= text_field_tag :city, @user.city %>
-  </div> 
-  <div>
-    <%= label_tag :state %> 
-    <%= text_field_tag :state, @user.state %>
-  </div> 
-  <div>
-    <%= label_tag :zip %> 
-    <%= text_field_tag :zip, @user.zip %>
-  </div> 
-  <div>
-    <%= label_tag :phone %> 
-    <%= text_field_tag :phone, @user.phone %>
-  </div> 
-  <div>
-    <%= label_tag :gender %> 
-    <%= text_field_tag :gender, @user.gender %>
-  </div> 
-  <div>
-    <%= label_tag :has_yard %> 
-    <%= text_field_tag :has_yard, @user.has_yard %>
-  </div>
-  <div>
-    <%= label_tag :has_kids %> 
-    <%= text_field_tag :has_kids, @user.has_kids %>
-  </div>
-  <div>
-    <%= label_tag :employed %> 
-    <%= text_field_tag :employed, @user.employed %>
-  </div>
-  <div>
-    <%= label_tag :retired %> 
-    <%= text_field_tag :retired, @user.retired %>
-  </div>
+  <section id="content-region-3" class="padding-40 page-tree-bg">
+            <div class="container">
+                <h3 class="page-tree-text">Register</h3>
+            </div>
+        </section><!--page-tree end here-->
+        <div class="space-70"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="my-login-form">
+                         <form>
+                        <h4 class="heading-mini">Your Info</h4><hr>
+                        <div class="row">
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="text" class="form-control" placeholder="First Name">
+                            </div>
+                             <div class="col-md-6 margin-btm-20">
+                                <input type="email" class="form-control" placeholder="Last Name">
+                            </div>
+                             <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Street Address">
+                            </div>
+                             <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="City">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="State">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Zip">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Phone Number">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Gender">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Needs a Yard">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Have a yard?">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Have Kids?">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Employed?">
+                            </div>
+                            <div class="col-md-6 margin-btm-20">
+                                <input type="password" class="form-control" placeholder="Retired?">
+                            </div>
+                            <div class="col-md-12 text-right">
+                                <button type="submit" class="btn theme-btn-color">Submit</button>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="form-btm-link text-center">
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <% end %>
 
 
-<div>
-<button class="simple-alert btn theme-btn-default btn-lg btn-sweet-alert">Submit</button>
 
-</div>
-  <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -28,21 +28,35 @@
   <div ng-app="app">
     <div ng-controller="pawCtrl" ng-init="setup()">
       <div ng-app="myApp">
-        Search: <input ng-model="name">
-        <button ng-click="searchPaw(name)">search</button>
-      </div>
-
+        </div>
+      <div class="container">
       <div class="search">
-        Or, upload a photo:
+        <h3>Or, upload a photo:</h3>
         <form>
-          <input type="file" file-model="fileToUpload"/>
-          <button ng-click="searchPaw2(fileToUpload)">Search</button>
+          <input type="file" accept="image/*;capture=camera" class="btn theme-btn-default btn-lg" file-model="fileToUpload"/>
+          <button class="btn theme-btn-default btn-lg" ng-click="searchPaw2(fileToUpload)">Search</button>
         </form>
       </div>
+      </div>
+
+      <div class="cat" ng-if="loadingSearch">
+      <p>Loading your matches...</p>
+      <style>
+      .cat {
+        text-align: center;
+      p {
+        text-align: center;
+      }
+      }
+      </style>
+
+        <img src="assets/img/346.gif" alt="" style="width:60px;height:60px;">
+      </div>
       
-      <div ng-repeat="paw in paws">
+      <div class="container" ng-repeat="paw in paws">
         <h2>{{ paw.petName }}</h2>
-        <button ng-click="addToExternalFavorite(paw)">Add to favorite</button>
+        <h2>{{ paw.petDescription }}</h2>
+        <button ng-click="addToExternalFavorite(paw)"class="btn theme-btn-default btn-lg">Add to favorite</button>
         <img ng-src="{{paw.imageUrl}}">
       </div>
     </div>

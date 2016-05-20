@@ -35,8 +35,11 @@
   }]);
 
   angular.module("app").controller("pawCtrl", function($scope, fileUpload, $http) {
-    $scope.setup = function() {
 
+    $scope.external_paws = [];
+
+    $scope.setup = function() {
+      $scope.loadingSearch = false;
     };
     $scope.uploadFile = function(file) {
 
@@ -51,7 +54,7 @@
     };
 
     $scope.searchPaw2 = function() {
-
+      $scope.loadingSearch = true;
       var file = $scope.fileToUpload;
       console.log('file is ' );
       console.dir(file);
@@ -60,27 +63,41 @@
         console.log('success', response);
         $scope.paws = response.data.images;
         console.log($scope.paws);
+        $scope.loadingSearch = false;
       });
     };
 
+    // $scope.addToExternalFavorite = function(inputPawName, inputPawDescription, inputPawImage) {
+    //   $http.post('api/v1/external_paws',
+    //     {'name': inputPaw.name, 'description':  inputPaw.description, 'image':inputPaw.image})
+    //   .then(
+    //       console.log(inputPaw)
+    //     );
+    // };
+
+    // $scope.setup = function(){
+    //   $http.get('/api/v1/pawsphoto').then(function(response){
+    //     $scope.externalpaw = response.data;
+    //   });
+    // };
+
     $scope.addToExternalFavorite = function(inputPaw) {
-      $http.post('api/v1/external_paws',{'name': inputPaw.name, 'description':  inputPaw.description})
-      .then(
-          console.log(inputPaw)
-        );
+      console.log(inputPaw);
+      var params = {
+        name: inputPaw.petName,
+        breed: inputPaw.breed,
+        description :inputPaw.description,
+        image: inputPaw.imageUrl,
+        url: inputPaw.pageUrl
+      };
+      console.log(params);
+
+      $http.post('/api/v1/external_paws', params).then(function(response) {
+        console.log(response);
+        // $scope.external_paws.push(newFavorite);
+      });
     };
-      // $http({
-      //   method: 'POST',
-      //   url: '/api/v1/pawsphoto',
-      //   headers: {
-      //     'Content-Type': 'multipart/form-data'
-      //   },
-      //   data: {
-      //     data: model,
-      //     file: file
-      //   },
-      //   transformRequest: customFormDataObject
-      // });
+      
     
 
     window.$scope = $scope;
